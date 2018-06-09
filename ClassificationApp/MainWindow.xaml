@@ -8,6 +8,6 @@
     <TextBox Name="textBox1" Text=""> </TextBox> 
     <TextBox Name="filter2"> </TextBox> 
     <TextBox Name="filter3"> </TextBox>
-    <Button Content="Start Demo"  Name="button1"> </Button>
+    <Button Content="Start Demo"  Name="button1" Click="OnButtonClicked" > </Button>
   </StackPanel>
 </Window>
