@@ -22,9 +22,11 @@ namespace ClassificationApp
             AvaloniaXamlLoader.Load(this);
         }
 
-        public void OnButtonClicked(object sender, RoutedEventArgs args)
+        private void OnButtonClicked(object sender, RoutedEventArgs args)
         {
-            const string commands = @"matlab.exe";
+            string matlabCommant = "\"cifar10cnn(10, 10, 20, 'cifar10Net', 1, randperm(10000,100))\"";
+            string commands = $@"cd C:\Program Files\\MATLAB\\R2018a\\bin 
+                                matlab -r {matlabCommant}";
             var process = new Process
             {
                 StartInfo = new ProcessStartInfo
